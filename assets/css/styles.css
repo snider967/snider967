@@ -1,9 +1,17 @@
+/*Main Background Color*/
 html{
   background-color: lightblue;
 }
 
+/*Main font (for body), eliminating top margin*/
 body{
   margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Font for h1 */
+h1{
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 ul{
@@ -22,13 +30,44 @@ a{
 
 .navbar{
   margin:0 auto;
-  width: 500px;
+  max-width: 500px;
+  display: flex;
 }
 
+/* Also centers the titles */
 .nav-item{
   display: inline-block;
+  flex-grow: 1;
+  text-align: center;
 }
 
+/* Centers the titles */
+.nav-item a {
+  text-transform: uppercase;
+  padding: 10px;
+  display: inline-block;
+  margin: 10px;
+  position: relative;
+}
+
+/* Defined the shape of the underline */
+.nav-item a:after{
+  content: "";
+  display: none;
+  position: absolute;
+  height: 2px;
+  width: 50px;
+  background-color: #fff;
+  left: calc(50% - 25px);
+  bottom: 0;
+}
+
+/* Displays the underline specified above upon hover*/
+.nav-item a:hover:after {
+  display: block;
+}
+
+/* Hiding dropdown menu*/
 .dropdown-menu{
   display: none;
 }
