@@ -77,10 +77,27 @@ a{
   display: block;
   background-color: #ffffff;
   position: absolute;
-  right: 0;
+  left: -42px;
+  width: 200px;
+  text-align: left;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  padding: 5px 0;
+  transform: scale(0);
+  transition: transform ease-in-out 500ms;
 }
 
+/*Adding hover box (grey) on dropdown menu*/
 .dropdown-item a {
   color: #777777;
+  display:block;
+  margin: 0;
+}
 
+.dropdown-item a:hover {
+  background-color: #ccc
+}
+
+.dropdown-menu.open{
+    transform: scale(1);
 }
